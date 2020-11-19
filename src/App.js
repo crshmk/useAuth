@@ -1,9 +1,16 @@
+import { AuthProvider } from './useAuth'
+import User from './User'
+import UserName from './User/Name'
+import UserEmail from './User/Email'
 
 function App() {
   return (
-    <div>
-    <p>test</p>
-    </div>
+    <AuthProvider>
+      <User>
+        <UserName />
+        <UserEmail />
+      </User>
+    </AuthProvider>
   );
 }
 
